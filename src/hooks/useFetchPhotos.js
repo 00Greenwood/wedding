@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CryptoJS from "crypto-js";
 
-const useFetchPhotos = (encryptionKey) => {
+export const useFetchPhotos = (encryptionKey) => {
   const [loading, setLoading] = useState(true);
   const [images, setImages] = useState([]);
   const [error, setError] = useState(null);
@@ -28,5 +28,3 @@ const useFetchPhotos = (encryptionKey) => {
 
   return { loading, images, error };
 };
-
-export default useFetchPhotos;
