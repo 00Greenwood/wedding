@@ -14,18 +14,20 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.0.2",
+    "@mui/x-date-pickers": "^8.1.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "astro": "^5.7.5",
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.13",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-error-boundary": "^5.0.0"
   },
   "devDependencies": {
     "axios": "^1.9.0",
-    "crypto-js": "^4.2.0",
     "dotenv": "^16.5.0",
     "gh-pages": "^6.3.0",
-    "prettier": "3.5.3",
-    "ts-node": "^10.9.2"
+    "prettier": "3.5.3"
   }
 }

@@ -57,7 +57,7 @@ async function createPhotoLinks(accessToken, folderId) {
 
           links.push({
             name: photo.name,
-            image: photo.image,
+            ...photo.image,
             link: linkResponse.data.link.webUrl,
           });
           break; // Exit the loop if the link is generated successfully
