@@ -5,6 +5,7 @@ import {
   DatePicker as MUIDatePicker,
 } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import 'dayjs/locale/en-gb';
 
 export const DatePicker = ({ setDate }) => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -26,7 +27,7 @@ export const DatePicker = ({ setDate }) => {
         height: "100vh",
       }}
     >
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale='en-gb'>
         <MUIDatePicker
           label="Wedding Date"
           value={selectedDate}
