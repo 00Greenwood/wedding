@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import { Button, Box, List } from "@mui/material";
-import {
-  LocalizationProvider,
-  DatePicker as MUIDatePicker,
-} from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { Button, Box, TextField } from "@mui/material";
 
 export const DatePicker = ({ setDate }) => {
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(undefined);
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+  const handleDateChange = (event) => {
+    setSelectedDate(event.target.value);
   };
 
   const handleSubmit = () => {
@@ -26,13 +21,12 @@ export const DatePicker = ({ setDate }) => {
         height: "100vh",
       }}
     >
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <MUIDatePicker
-          label="Wedding Date"
-          value={selectedDate}
-          onChange={handleDateChange}
-        />
-      </LocalizationProvider>
+      <TextField
+        variant="outlined"
+        value={selectedDate}
+        onChange={handleDateChange}
+        placeholder={"DD/MM/YYYY"}
+      />
       <Button
         variant="contained"
         disabled={!selectedDate}

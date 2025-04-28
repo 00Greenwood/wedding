@@ -5,8 +5,7 @@ import { LoadingSpinner } from "./LoadingSpinner";
 import { ImageCard } from "./ImageCard";
 
 export const Gallery = ({ date }) => {
-  const encryptionKey = date.format("DD/MM/YYYY");
-  const { loading, images, error } = useFetchPhotos(encryptionKey);
+  const { loading, images, error } = useFetchPhotos(date);
 
   if (loading) {
     return <LoadingSpinner />;

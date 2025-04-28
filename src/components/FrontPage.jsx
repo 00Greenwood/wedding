@@ -12,7 +12,7 @@ const darkTheme = createTheme({
 });
 
 export const FrontPage = () => {
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState(undefined);
 
   return (
     <ErrorBoundary>
