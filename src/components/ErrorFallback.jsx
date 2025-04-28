@@ -10,9 +10,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }) => {
       <Typography variant="body1" color="error">
         {error.message}
       </Typography>
-      <Button variant="contained" onClick={resetErrorBoundary}>
-        Reload
-      </Button>
     </Box>
   );
 };

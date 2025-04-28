@@ -6,7 +6,7 @@ import {
 } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
-export const DatePicker = (setDate) => {
+export const DatePicker = ({ setDate }) => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   const handleDateChange = (date) => {
@@ -33,7 +33,12 @@ export const DatePicker = (setDate) => {
           onChange={handleDateChange}
         />
       </LocalizationProvider>
-      <Button variant="contained" type="submit" onClick={handleSubmit}>
+      <Button
+        variant="contained"
+        disabled={!selectedDate}
+        onClick={handleSubmit}
+        sx={{ marginLeft: 2, height: 56 }}
+      >
         Submit
       </Button>
     </Box>
