@@ -2,4 +2,4 @@
 dist
 node_modules
 .astro
-src/assets/photos.encrypted.json
+**/photos.encrypted.json

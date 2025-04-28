@@ -7,7 +7,7 @@ require("dotenv").config(); // Load environment variables from .env file
 const accessToken = process.env.ACCESS_TOKEN;
 const folderId = process.env.FOLDER_ID;
 const encryptionKey = process.env.ENCRYPTION_KEY;
-const outputFilePath = "./src/assets/photos.encrypted.json";
+const outputFilePath = "./public/photos.encrypted.json";
 
 async function createPhotoLinks(accessToken, folderId) {
   let url = `https://graph.microsoft.com/beta/me/drive/items/${folderId}/children`;
