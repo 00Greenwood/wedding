@@ -7,4 +7,5 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [react()],
   base: "/wedding/",
+  build: {  assets: 'astro' } 
 });
