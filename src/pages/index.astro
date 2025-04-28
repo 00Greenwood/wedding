@@ -1,6 +1,5 @@
 ---
 import { FrontPage } from "../components/FrontPage.jsx";
-import { ErrorBoundary } from "../components/ErrorBoundary.jsx";
 ---
 
 <html lang="en">
@@ -9,8 +8,6 @@ import { ErrorBoundary } from "../components/ErrorBoundary.jsx";
     <title>Anna & Marcus</title>
   </head>
   <body>
-    <ErrorBoundary>
-      <FrontPage client:visible />
-    </ErrorBoundary>
+    <FrontPage client:visible />
   </body>
 </html>
