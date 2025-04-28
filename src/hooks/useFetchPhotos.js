@@ -10,7 +10,7 @@ export const useFetchPhotos = (encryptionKey) => {
     const fetchImages = async () => {
       try {
         console.log("Fetching images...");
-        const response = await fetch("/photos.encrypted.json");
+        const response = await fetch(`${import.meta.env.BASE_URL}/photos.encrypted.json`);
         const text = await response.text();
         const decryptedData = CryptoJS.AES.decrypt(
           text,
